@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    ">
+    <bean id="book" class="Book">
+    <constructor-arg name="isbn" value="333334">
+    </constructor-arg><constructor-arg name="price" value="33">
+    </constructor-arg><constructor-arg name="title" value="Machine Learning in Python">
+     </constructor-arg></bean>
+     <bean id="book1" class="Book">
+     <constructor-arg name="isbn" value="335464">
+    </constructor-arg><constructor-arg name="price" value="3356">
+    </constructor-arg></bean>
+    
+     <bean id="Autor" class="Autor">
+     <constructor-arg name="autorId" value="779">
+    </constructor-arg><constructor-arg name="autorName" value="Sushnat Patil">
+    </constructor-arg><constructor-arg name="Countary" value="Us">
+    </constructor-arg><constructor-arg name="bookRefactor" ref="book1">
+    </constructor-arg></bean>
+ 
+   
+    <context:annotation-config />
+</beans>
